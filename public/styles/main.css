@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ///////////////////////////// */
+/* css for the header */
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 3.2rem;
+}
+.logo-img {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+.img {
+    height: 15rem;
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 3.6rem;
+    justify-content: center;
+    background-color: orange;
+    padding: 1rem;
+}
+.nav-ele a {
+    text-decoration: none;
+    color: white;
+}
+.social-handles {
+    background-color: rgb(37, 224, 146);
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4rem;
+}
+
+.nav-ele a {
+    display: flex;
+}
+.login-button {
+    background-color: black;
+    border-radius: 15px;
+    padding: 3px 6px;
+}
