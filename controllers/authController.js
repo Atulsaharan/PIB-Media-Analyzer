@@ -1,4 +1,5 @@
 const User = require("./../models/user");
+const { promisify } = require("util");
 const JWT = require("jsonwebtoken");
 const signToken = (id) => {
     return JWT.sign({ id }, process.env.JWT_SECRET, {
@@ -8,9 +9,9 @@ const signToken = (id) => {
 //register a new user
 exports.register = async (req, res) => {
     try {
-        const { username, password } = req.body;
+        const { email, password } = req.body;
         const data = await User.create({
-            username: username,
+            email: email,
             password: password,
         });
         const token = signToken(data._id);
@@ -28,23 +29,74 @@ exports.register = async (req, res) => {
 //logging in a user
 exports.login = async (req, res) => {
     try {
-        const { username, password } = req.body;
+        const { email, password } = req.body;
         //1)check if email and password exist
-        if (!username || !password) {
+        if (!email || !password) {
             throw new Error("Please provide email and password");
         }
         //2)check if user exist and password is correct
-        const user = await User.findOne({ username });
+        const user = await User.findOne({ email });
         if (!user || !(password === user.password)) {
-            throw new Error("Incorrect username or password");
+            throw new Error("Incorrect email or password");
         }
         //3)if everything ok send the token to the client
         const token = signToken(user._id);
+        res.cookie("jwt", token, {
+            expiresIn: new Date(
+                Date.now() +
+                    process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+            ),
+            httpOnly: true,
+        });
         res.status(200).json({ status: "success", token });
     } catch (err) {
         res.status(400).json({
             result: "fail",
             error: err.message,
         });
+    }
+};
+
+//building a function that will look if the user is logged in
+exports.protect = async (req, res, next) => {
+    try {
+        // getting token and check if it's there
+        let token;
+        if (
+            req.headers.authorization &&
+            req.headers.authorization.startsWith("Bearer")
+        ) {
+            token = req.headers.authorization.split(" ")[1];
+            // res.status(200).json({
+            //     status: "success",
+            //     token,
+            // });
+        } else if (req.cookies.jwt) {
+            token = req.cookies.jwt;
+        }
+        if (!token) {
+            return next(new Error("You are not logged in !!"));
+        }
+        //verification of token
+        const decoded = await promisify(JWT.verify)(
+            token,
+            process.env.JWT_SECRET
+        );
+        //check if user still exist
+        const freshUser = await User.findById(decoded.id);
+        if (!freshUser) {
+            return next(new Error("user no longer exist"));
+        }
+        //check if user changed password after the token was issued
+        //will do this later have edit schema add schema method ..........
+        req.user = freshUser;
+        next();
+    } catch (err) {
+        res.status(401).json({
+            status: "fail",
+            message: err.message,
+            err: err,
+        });
+        // console.log(err);
     }
 };

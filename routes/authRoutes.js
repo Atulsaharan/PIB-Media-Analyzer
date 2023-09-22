@@ -8,6 +8,13 @@ router.post("/register", authController.register);
 
 //login a user
 router.post("/login", authController.login);
+
+//testin route for the protected routes
+
+router.post("/test", authController.protect, () => {
+    console.log("i am mf protected");
+});
+
 // router.route("/login").post(authController.login);
 // router.get("/", "./../public/html/index.html");
 module.exports = router;
