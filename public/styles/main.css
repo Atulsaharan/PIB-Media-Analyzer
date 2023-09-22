@@ -27,9 +27,20 @@ body {
     background-color: #ff922b;
     padding: 1rem;
 }
+
+.nav__el {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    gap: 1.5rem;
+}
 .nav-ele a {
+    display: flex;
     text-decoration: none;
     color: white;
+    /* align-items: center; */
 }
 .social-handles {
     background-color: #8ce99a;
@@ -45,9 +56,7 @@ body {
     width: 40px;
     transform: translateY(4px);
 }
-.nav-ele a {
-    display: flex;
-}
+
 .login-button {
     background-color: black;
     border-radius: 15px;

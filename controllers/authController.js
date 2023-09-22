@@ -89,6 +89,7 @@ exports.protect = async (req, res, next) => {
         }
         //check if user changed password after the token was issued
         //will do this later have edit schema add schema method ..........
+        res.locals.user = freshUser;
         req.user = freshUser;
         next();
     } catch (err) {

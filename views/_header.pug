@@ -40,5 +40,12 @@ header.header
                     <a href="#"target="blank">2021</a>
                 </div>
                 </div>
-        li.nav-ele.login-button
-            a(href="/login") LOGIN
+        if user
+            li.nav-ele.nav__el--logout.login-button
+                a(href="/logout") Log out
+            a.nav__el.nav-ele(href='/me')
+                img.nav__user-img(src=`/images/user.png` style="height:2.5rem;transform:scale(2)" )
+                span= user.email.split(' ')[0]
+        else 
+            li.nav-ele.login-button
+                a(href="/login") LOGIN

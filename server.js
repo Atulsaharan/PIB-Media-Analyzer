@@ -25,12 +25,12 @@ app.listen(process.env.PORT, () => {
 });
 //this is only for dev purpose for auto reloading the web browser
 
-browserSync.init({
-    proxy: "http://localhost:3000",
-    files: ["./public/styles/*.css", "./public/scripts/*.js", "./views/*.pug"],
-    open: false,
-    basedir: "./",
-    awaitWriteFinish: true,
+// browserSync.init({
+//     proxy: "http://localhost:3000",
+//     files: ["./public/styles/*.css", "./public/scripts/*.js", "./views/*.pug"],
+//     open: false,
+//     basedir: "./",
+//     awaitWriteFinish: true,
 
-    injectChanges: false,
-});
+//     injectChanges: false,
+// });
