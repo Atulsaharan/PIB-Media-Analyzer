@@ -5,8 +5,10 @@ const authController = require("../controllers/authController");
 const router = express.Router();
 
 router.get("/", viewController.getOverview);
-
+router.get("/about-PIB-media-analyzer",viewController.getPIBmediaAbout)
 router.get("/login", viewController.getLoginForm);
+
+router.get("/department-info",viewController.showDepInfo)
 
 router.get("/profile", authController.protect, viewController.showProfile);
 //setting view routes
