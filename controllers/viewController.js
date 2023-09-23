@@ -23,9 +23,7 @@ exports.getLoginForm = async (req, res) => {
 
 exports.showProfile = async (req, res) => {
     try {
-        await res.status(200).render("profile.pug", {
-            random: "surbhi",
-        });
+        await res.status(200).render("profile.pug", {});
     } catch (err) {
         //the catch block is not working currently
         res.status(500).send("something went very wrong");
