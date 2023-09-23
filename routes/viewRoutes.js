@@ -4,9 +4,9 @@ const authController = require("../controllers/authController");
 
 const router = express.Router();
 
-router.get("/", viewController.getOverview);
+router.get("/", authController.isLoggedIn, viewController.getOverview);
 
-router.get("/login", viewController.getLoginForm);
+router.get("/login", authController.isLoggedIn, viewController.getLoginForm);
 
 router.get("/profile", authController.protect, viewController.showProfile);
 //setting view routes

@@ -36,6 +36,9 @@ body {
     color: black;
     gap: 1.5rem;
 }
+.nav__el--logout {
+    color: white;
+}
 .nav-ele a {
     display: flex;
     text-decoration: none;
