@@ -1,0 +1,5 @@
+title,content,sentiment
+Sample News 1,This is the content of the first news article.,-1
+Sample News 2,This is the content of the second news article.,0
+Sample News 3,This is the content of the third news article.,1
+Sample News 4,This is the content of the fourth news article.,-1

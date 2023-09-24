@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const app = require("./app");
 const mongoose = require("mongoose");
 const browserSync = require("browser-sync");
+const sendEmail = require("./utils/mail");
 
 dotenv.config({ path: "./config.env" });
 
@@ -34,3 +35,10 @@ app.listen(process.env.PORT, () => {
 
 //     injectChanges: false,
 // });
+
+// EMAIL_HOST=sandbox.smtp.mailtrap.io
+// EMAIL_PORT=25
+// EMAIL_USERNAME=58347d3e18e7aa
+// EMAIL_PASSWORD=165b070f0c33e0
+// email
+// mfll hamd avct omlz

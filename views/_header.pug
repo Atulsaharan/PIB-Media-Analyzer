@@ -41,8 +41,7 @@ header.header
                 </div>
                 </div>
         if user
-            li.nav-ele.nav__el--logout.login-button
-                a(href="/logout") Log out
+            a.nav-ele.nav__el--logout.login-button Log out
             a.nav__el.nav-ele(href='/me')
                 img.nav__user-img(src=`/images/user.png` style="height:2.5rem;transform:scale(2)" )
                 span= user.email.split(' ')[0]

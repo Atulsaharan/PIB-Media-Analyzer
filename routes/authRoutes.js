@@ -9,6 +9,8 @@ router.post("/register", authController.register);
 //login a user
 router.post("/login", authController.login);
 
+//logging user out
+router.get("/logout", authController.logout);
 //testin route for the protected routes
 
 router.post("/test", authController.protect, () => {

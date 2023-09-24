@@ -1,4 +1,15 @@
 extends base
 
 block content
+<<<<<<< HEAD
     <img src="images/indian-emblem"/>
+=======
+  .dashboard-container
+    h1 Dashboard
+    ul.news-list
+      each article in articles
+        li.news-item
+          h2.news-title= article.title
+          p.news-content= article.content
+          a.news-link(href=`/news/${article._id}`) Read More
+>>>>>>> 1c3ba06b67195e291d81d2adb0e0bf410c945a2c
