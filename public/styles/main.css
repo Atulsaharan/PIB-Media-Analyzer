@@ -327,4 +327,13 @@ body {
 
 
 
-/* ////////////////////////////////// */
+/* departInfo */
+.deptInfo-text-lg{
+    margin: auto;
+    padding: 20px;
+    margin-left: 30px;
+}
+.deptInfo-container{
+    margin: auto;
+    padding: 30px;
+}
