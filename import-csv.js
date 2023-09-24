@@ -32,6 +32,7 @@ async function importCSV() {
                 title: row.title,
                 content: row.content,
                 sentiment: row.sentiment,
+                department: row.department,
                 // Add more fields and mappings as needed
             });
             console.log(`Inserted: ${row.title}`);
@@ -39,7 +40,7 @@ async function importCSV() {
                 //sendinng email
                 sendEmail({
                     email: "idanurag567@gmail.com",
-                    subject: `Neagtive-News:${row.title}`,
+                    subject: `Negative-News:${row.title}`,
                     message: row.content,
                 }).then(console.log("Email sent succesfully"));
             }

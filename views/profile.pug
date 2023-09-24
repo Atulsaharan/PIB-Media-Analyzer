@@ -1,3 +1,24 @@
 extends base
 block content
-    p1 this is the motherfucking protected route ONLY ACESSED BY PIB OFFICERS 
+  .profile-container
+    h1 PIB Officer Login
+    h2= `Department: ${user.department}`
+    
+    .news-columns
+      .positive-news-column
+        h3 Positive News
+        ul.news-list
+          each article in positiveNews
+            li.news-item
+              h2.news-title= article.title
+              p.news-content= article.content
+              a.news-link(href=`/news/${article._id}`) Read More
+
+      .negative-news-column
+        h3 Negative News
+        ul.news-list
+          each article in negativeNews
+            li.news-item
+              h2.news-title= article.title
+              p.news-content= article.content
+              a.news-link(href=`/news/${article._id}`) Read More

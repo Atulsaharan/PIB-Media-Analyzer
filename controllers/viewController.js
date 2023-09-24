@@ -30,7 +30,30 @@ exports.getLoginForm = async (req, res) => {
 
 exports.showProfile = async (req, res) => {
     try {
-        await res.status(200).render("profile.pug", {});
+        await db.client.connect();
+        const database = db.client.db("PIB");
+        const collection = database.collection("news");
+        let positiveNews;
+        let negativeNews;
+
+        //adding the if-else only for if the user is admin then he could be able to see all the news in the databse marked as positive and negative
+        if (req.user.department === "admin") {
+            positiveNews = await collection.find({ sentiment: "1" }).toArray();
+
+            negativeNews = await collection.find({ sentiment: "-1" }).toArray();
+        } else {
+            positiveNews = await collection
+                .find({ sentiment: "1", department: req.user.department })
+                .toArray();
+
+            negativeNews = await collection
+                .find({ sentiment: "-1", department: req.user.department })
+                .toArray();
+        }
+        await res.status(200).render("profile.pug", {
+            positiveNews,
+            negativeNews,
+        });
     } catch (err) {
         //the catch block is not working currently
         res.status(500).send("something went very wrong");

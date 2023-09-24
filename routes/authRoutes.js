@@ -13,10 +13,6 @@ router.post("/login", authController.login);
 router.get("/logout", authController.logout);
 //testin route for the protected routes
 
-router.post("/test", authController.protect, () => {
-    console.log("i am mf protected");
-});
-
 // router.route("/login").post(authController.login);
 // router.get("/", "./../public/html/index.html");
 module.exports = router;

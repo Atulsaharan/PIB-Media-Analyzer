@@ -9,10 +9,12 @@ const signToken = (id) => {
 //register a new user
 exports.register = async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { email, password, name, department } = req.body;
         const data = await User.create({
             email: email,
             password: password,
+            name,
+            department,
         });
         const token = signToken(data._id);
         res.status(200).json({
@@ -22,7 +24,6 @@ exports.register = async (req, res) => {
         });
     } catch (err) {
         res.status(400).json({ error: err.message });
-        console.log(err, "wtf");
     }
 };
 
