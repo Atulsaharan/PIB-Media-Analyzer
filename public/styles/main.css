@@ -326,3 +326,49 @@ body {
 .alert--error {
     background-color: #eb4d4b;
 }
+
+/* /////////////////////////////////////////////////////// */
+/* dashboard css */
+/* /////////////////////////////////////////////////////// */
+/* Basic styling for the dashboard */
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.news-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.news-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.news-content {
+    font-size: 16px;
+}
+
+.news-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}

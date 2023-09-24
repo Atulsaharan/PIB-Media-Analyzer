@@ -1,6 +1,13 @@
+const db = require("./../utils/dbclient");
 exports.getOverview = async (req, res) => {
     try {
-        res.status(200).render("index.pug");
+        await db.client.connect();
+        const database = db.client.db("PIB");
+        const collection = database.collection("news");
+        const articles = await collection.find({}).toArray();
+        res.status(200).render("index.pug", {
+            articles,
+        });
 
         //we would need to await the query for getting news from the database
     } catch (err) {
