@@ -59,3 +59,25 @@ exports.showProfile = async (req, res) => {
         res.status(500).send("something went very wrong");
     }
 };
+
+// exports.getPibMainFunctions=async (req,res)=>{
+//     try{
+//         await res.status(200).render('pib-main-function')
+//     }catch(err){
+//         res.status(500).send("something went very wrong!!")
+//     }
+// }
+exports.getPibMainFunctions = async (req, res) => {
+    try {
+        await res.status(200).render("pib-main-function");
+    } catch (err) {
+        res.status(500).send("something went very wrong!!");
+    }
+};
+exports.getPibOrganizationalSetup = async (req, res) => {
+    try {
+        await res.status(200).render("pib-organizational-setup");
+    } catch (err) {
+        res.status(500).send("something went very wrong!!");
+    }
+};
