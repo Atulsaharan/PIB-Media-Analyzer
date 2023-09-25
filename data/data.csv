@@ -1,5 +1,5 @@
 title,content,sentiment,department,
-Sample News 1,This is the a negative news of technology department.,-1,technology
+Sample News 1,This is the a negative news of technology department.,-1,Technology
 Sample News 2,This is the content of the second news article.,0
-Sample News 3,This is the content of the third and positive news article.,1,technology
+Sample News 3,This is the content of the third and positive news article.,1,Technology
 Sample News 4,This is the content of the fourth news article.,-1
