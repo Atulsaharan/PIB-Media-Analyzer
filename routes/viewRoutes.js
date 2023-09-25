@@ -8,9 +8,6 @@ router.get("/", authController.isLoggedIn, viewController.getOverview);
 
 router.get("/login", authController.isLoggedIn, viewController.getLoginForm);
 
-router.get("/department-info",viewController.showDepInfo)
-
-
 router.get("/profile", authController.protect, viewController.showProfile);
 //setting view routes
 // app.get("/", (req, res) => {
