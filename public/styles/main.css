@@ -5,9 +5,15 @@
 }
 .primary-heading {
     font-size: 4.8rem;
+    font-weight: 800;
 }
 .secondary-heading {
-    font-size: 3.2rem;
+    font-size: 3.8rem;
+    font-weight: 600;
+}
+.tertiary-heading {
+    font-size: 3rem;
+    font-weight: 400;
 }
 /* ///////////////////////////// */
 /* css for the header */
@@ -164,7 +170,11 @@ body {
     max-width: 100%;
     height: auto;
 }
-
+.footer-logo {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
 .footer-columns {
     display: flex;
     flex-wrap: wrap;
@@ -335,27 +345,53 @@ body {
 }
 
 /* /////////////////////////////////////////////////////// */
+/* hero-section */
+/* /////////////////////////////////////////////////////// */
+.hero {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    justify-items: center;
+    padding: 2rem 5rem 5rem 5rem;
+    background-color: #fff4e6;
+}
+.hero-text-box {
+    padding-top: 15rem;
+}
+.img-hero {
+    /* height: 60rem; */
+    width: 80rem;
+}
+.hero-heading {
+    font-size: 6rem;
+    font-weight: 900;
+}
+/* /////////////////////////////////////////////////////// */
 /* dashboard css */
 /* /////////////////////////////////////////////////////// */
 /* Basic styling for the dashboard */
 .dashboard-container {
-    max-width: 800px;
+    max-width: 150rem;
     margin: 0 auto;
-    padding: 20px;
+    padding: 3rem;
     text-align: center;
 }
 
 .news-list {
     list-style-type: none;
-    padding: 0;
+    padding: 3rem;
 }
-
+.news-item:hover {
+    transform: scale(1.05);
+}
 .news-item {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    background-color: #f8f9fa;
+    transition: all 0.2s;
 }
 
 .news-title {
@@ -384,8 +420,12 @@ body {
 /* css of profile.pug */
 /* /////////////////////////////////////////////////// */
 /* Basic styling for the profile page */
+
+.proin-header {
+    text-align: start;
+}
 .profile-container {
-    max-width: 100rem;
+    max-width: 160rem;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -395,6 +435,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    padding-top: 4rem;
 }
 
 .positive-news-column,
@@ -404,4 +445,10 @@ body {
 
 .positive-news-column {
     font-weight: 400;
+}
+.positive-news {
+    background-color: #d3f9d8;
+}
+.negative-news {
+    background-color: #ffe3e3;
 }
