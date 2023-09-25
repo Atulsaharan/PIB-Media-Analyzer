@@ -425,23 +425,26 @@ body {
     text-align: start;
 }
 .profile-container {
-    max-width: 160rem;
+    max-width: 170rem;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
 }
 
 .news-columns {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
-    gap: 20px;
     padding-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    gap: 20px;
 }
 
-.positive-news-column,
-.negative-news-column {
+/* .positive-news-column,
+.negative-news-column,
+.neutral-news-column {
     flex: 1;
-}
+} */
 
 .positive-news-column {
     font-weight: 400;

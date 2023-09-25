@@ -39,11 +39,15 @@ exports.showProfile = async (req, res) => {
         //adding the if-else only for if the user is admin then he could be able to see all the news in the databse marked as positive and negative
         if (req.user.department === "admin") {
             positiveNews = await collection.find({ sentiment: "1" }).toArray();
+            neutralNews = await collection.find({ sentiment: "0" }).toArray();
 
             negativeNews = await collection.find({ sentiment: "-1" }).toArray();
         } else {
             positiveNews = await collection
                 .find({ sentiment: "1", department: req.user.department })
+                .toArray();
+            neutralNews = await collection
+                .find({ sentiment: "0", department: req.user.department })
                 .toArray();
 
             negativeNews = await collection
@@ -52,6 +56,7 @@ exports.showProfile = async (req, res) => {
         }
         await res.status(200).render("profile.pug", {
             positiveNews,
+            neutralNews,
             negativeNews,
         });
     } catch (err) {
