@@ -12,7 +12,7 @@ router.get("/profile", authController.protect, viewController.showProfile);
 
 router.get("/pib-main-functions", viewController.getPibMainFunctions);
 router.get(
-    "/pib-organizationsal-setup",
+    "/pib-organizational-setup",
     viewController.getPibOrganizationalSetup
 );
 //setting view routes
