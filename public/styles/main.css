@@ -13,8 +13,9 @@ body {
 }
 .logo-img {
     display: flex;
-    gap: 4rem;
+    gap: 7rem;
     justify-content: center;
+
 }
 .img {
     height: 13rem;
@@ -27,6 +28,11 @@ body {
     background-color: #ff922b;
     padding: 1rem;
 }
+/* this is for space between buttons */
+ul.nav-list{
+    display: flex;
+    justify-content: space-around;
+}
 
 .nav__el {
     display: flex;
@@ -35,6 +41,7 @@ body {
     text-decoration: none;
     color: black;
     gap: 1.5rem;
+   
 }
 .nav__el--logout {
     color: white;
@@ -46,6 +53,7 @@ body {
     /* align-items: center; */
 }
 .social-handles {
+    font-size: 10px;  
     background-color: #8ce99a;
     display: flex;
     justify-content: flex-end;
@@ -61,9 +69,34 @@ body {
 }
 
 .login-button {
-    background-color: black;
+    /* background-color: black; */
+     /* border-radius: 15px; */
+    padding: 3px 6px; 
+    /* new */
+    background-color: initial;
+    background-image: linear-gradient(-180deg, #00D775, #00BD68);
     border-radius: 15px;
-    padding: 3px 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+    height: 39px;
+    line-height: 39px;
+    outline: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    pointer-events: auto;
+    /* position: relative; */
+    text-align: center;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 10%;
+    z-index: 9;
+    border: 0;
 }
 
 /* copied  */
@@ -76,6 +109,7 @@ body {
 
 /* Links inside the navbar */
 .navbar a {
+    
     float: left;
     color: white;
     text-align: center;
@@ -250,6 +284,9 @@ body {
 /* ///////////////////////////////////////////////////////////////// */
 /* Government Login Form Styles */
 .login-container {
+    background-image: url(https://media.gettyimages.com/id/1009448862/vector/tricolor-brush-stroke.jpg?s=612x612&w=0&k=20&c=I_9HcrBxHaA3AkIUSIzVpXUxioInwRkb-UnQbRt100s=);
+    background-position: center;
+  
     max-width: 400px;
     margin: 0 auto;
     padding: 30px;
@@ -327,6 +364,26 @@ body {
     background-color: #eb4d4b;
 }
 
+
+
+
+/* departInfo */
+ .deptInfo-h3{
+    margin: auto;
+    padding: 20px;
+    margin-left: 30px;
+    background-color: #003478;
+}
+.deptInfo-container {
+    background-color: blue;
+    margin: auto;
+    padding: 30px;
+}
+.deptInfo-text-md{
+    margin: auto;
+    padding: 30px;
+    margin-left: 30px;
+} 
 /* /////////////////////////////////////////////////////// */
 /* dashboard css */
 /* /////////////////////////////////////////////////////// */

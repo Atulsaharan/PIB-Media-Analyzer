@@ -59,3 +59,19 @@ exports.showProfile = async (req, res) => {
         res.status(500).send("something went very wrong");
     }
 };
+
+exports.getPIBmediaAbout=async(req,res)=>{
+    try{
+        await res.status(200).render("about.pug");
+    }catch(err){
+        res.status(500).send("something went very wrong")
+    }
+}
+
+exports.showDepInfo=async(req,res)=>{
+    try{
+        await res.status(200).render("deptInfo.pug");
+    }catch(err){
+        res.status(500).send("something went very wrong")
+    }
+}
