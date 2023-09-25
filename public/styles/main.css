@@ -3,19 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+.primary-heading {
+    font-size: 4.8rem;
+    font-weight: 800;
+}
+.secondary-heading {
+    font-size: 3.8rem;
+    font-weight: 600;
+}
+.tertiary-heading {
+    font-size: 3rem;
+    font-weight: 400;
+}
 /* ///////////////////////////// */
 /* css for the header */
 html {
     font-size: 62.5%;
+    font-family: "Lato", sans-serif;
 }
 body {
     font-size: 3.2rem;
 }
 .logo-img {
     display: flex;
-    gap: 7rem;
+    gap: 4rem;
     justify-content: center;
-
 }
 .img {
     height: 13rem;
@@ -28,11 +40,6 @@ body {
     background-color: #ff922b;
     padding: 1rem;
 }
-/* this is for space between buttons */
-ul.nav-list{
-    display: flex;
-    justify-content: space-around;
-}
 
 .nav__el {
     display: flex;
@@ -41,7 +48,6 @@ ul.nav-list{
     text-decoration: none;
     color: black;
     gap: 1.5rem;
-   
 }
 .nav__el--logout {
     color: white;
@@ -53,7 +59,6 @@ ul.nav-list{
     /* align-items: center; */
 }
 .social-handles {
-    font-size: 10px;  
     background-color: #8ce99a;
     display: flex;
     justify-content: flex-end;
@@ -69,34 +74,9 @@ ul.nav-list{
 }
 
 .login-button {
-    /* background-color: black; */
-     /* border-radius: 15px; */
-    padding: 3px 6px; 
-    /* new */
-    background-color: initial;
-    background-image: linear-gradient(-180deg, #00D775, #00BD68);
+    background-color: black;
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
-    height: 39px;
-    line-height: 39px;
-    outline: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    pointer-events: auto;
-    /* position: relative; */
-    text-align: center;
-    touch-action: manipulation;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: top;
-    white-space: nowrap;
-    width: 10%;
-    z-index: 9;
-    border: 0;
+    padding: 3px 6px;
 }
 
 /* copied  */
@@ -109,7 +89,6 @@ ul.nav-list{
 
 /* Links inside the navbar */
 .navbar a {
-    
     float: left;
     color: white;
     text-align: center;
@@ -191,7 +170,11 @@ ul.nav-list{
     max-width: 100%;
     height: auto;
 }
-
+.footer-logo {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
 .footer-columns {
     display: flex;
     flex-wrap: wrap;
@@ -284,9 +267,6 @@ ul.nav-list{
 /* ///////////////////////////////////////////////////////////////// */
 /* Government Login Form Styles */
 .login-container {
-    background-image: url(https://media.gettyimages.com/id/1009448862/vector/tricolor-brush-stroke.jpg?s=612x612&w=0&k=20&c=I_9HcrBxHaA3AkIUSIzVpXUxioInwRkb-UnQbRt100s=);
-    background-position: center;
-  
     max-width: 400px;
     margin: 0 auto;
     padding: 30px;
@@ -364,48 +344,54 @@ ul.nav-list{
     background-color: #eb4d4b;
 }
 
-
-
-
-/* departInfo */
- .deptInfo-h3{
-    margin: auto;
-    padding: 20px;
-    margin-left: 30px;
-    background-color: #003478;
+/* /////////////////////////////////////////////////////// */
+/* hero-section */
+/* /////////////////////////////////////////////////////// */
+.hero {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    justify-items: center;
+    padding: 2rem 5rem 5rem 5rem;
+    background-color: #fff4e6;
 }
-.deptInfo-container {
-    background-color: blue;
-    margin: auto;
-    padding: 30px;
+.hero-text-box {
+    padding-top: 15rem;
 }
-.deptInfo-text-md{
-    margin: auto;
-    padding: 30px;
-    margin-left: 30px;
-} 
+.img-hero {
+    /* height: 60rem; */
+    width: 80rem;
+}
+.hero-heading {
+    font-size: 6rem;
+    font-weight: 900;
+}
 /* /////////////////////////////////////////////////////// */
 /* dashboard css */
 /* /////////////////////////////////////////////////////// */
 /* Basic styling for the dashboard */
 .dashboard-container {
-    max-width: 800px;
+    max-width: 150rem;
     margin: 0 auto;
-    padding: 20px;
+    padding: 3rem;
     text-align: center;
 }
 
 .news-list {
     list-style-type: none;
-    padding: 0;
+    padding: 3rem;
 }
-
+.news-item:hover {
+    transform: scale(1.05);
+}
 .news-item {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    background-color: #f8f9fa;
+    transition: all 0.2s;
 }
 
 .news-title {
@@ -428,4 +414,41 @@ ul.nav-list{
 .news-link:hover {
     text-decoration: underline;
     color: #0056b3;
+}
+
+/* /////////////////////////////////////////////////// */
+/* css of profile.pug */
+/* /////////////////////////////////////////////////// */
+/* Basic styling for the profile page */
+
+.proin-header {
+    text-align: start;
+}
+.profile-container {
+    max-width: 160rem;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.news-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 4rem;
+}
+
+.positive-news-column,
+.negative-news-column {
+    flex: 1;
+}
+
+.positive-news-column {
+    font-weight: 400;
+}
+.positive-news {
+    background-color: #d3f9d8;
+}
+.negative-news {
+    background-color: #ffe3e3;
 }

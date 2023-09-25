@@ -8,10 +8,13 @@ router.get("/", authController.isLoggedIn, viewController.getOverview);
 
 router.get("/login", authController.isLoggedIn, viewController.getLoginForm);
 
-router.get("/department-info",viewController.showDepInfo)
-
-
 router.get("/profile", authController.protect, viewController.showProfile);
+
+router.get("/pib-main-functions", viewController.getPibMainFunctions);
+router.get(
+    "/pib-organizational-setup",
+    viewController.getPibOrganizationalSetup
+);
 //setting view routes
 // app.get("/", (req, res) => {
 //     res.status(200).render("index.pug");

@@ -21,15 +21,15 @@ header.header
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="/about-PIB-media-analyzer" target="blank">About PIB Media analyzer</a>
-                    <a href="#" target="blank">Main Functions</a>
-                    <a href="#" target="blank">Organizational Setup</a>
+                    <a href="#" target="blank">About PIB Media analyzer</a>
+                    <a href="/pib-main-functions" target="blank">Main Functions</a>
+                    <a href="/pib-organizational-setup" target="blank">Organizational Setup</a>
                 </div>
                 </div>
         li.nav-ele
-            a(href="/department-info" target="blank") Departments Info
+            a(href="#" target="blank") Departments Info
         li.nav-ele
-            a(href="https://www.pornhub.org" target="blank") Selected Media
+            a(href="#" target="blank") Selected Media
         li.nav-ele
             <div class="dropdown">
                 <button class="dropbtn">Archives
@@ -44,7 +44,7 @@ header.header
             a.nav-ele.nav__el--logout.login-button Log out
             a.nav__el.nav-ele(href='/me')
                 img.nav__user-img(src=`/images/user.png` style="height:2.5rem;transform:scale(2)" )
-                span= user.email.split(' ')[0]
+                span= user.name.split(' ')[0]
         else 
             li.nav-ele.login-button
                 a(href="/login") LOGIN

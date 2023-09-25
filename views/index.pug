@@ -1,8 +1,17 @@
 extends base
 
 block content
+  section.hero-section 
+    .hero 
+      .hero-text-box
+        p.hero-heading Your Gateway to Media Analysis.
+        p.secondary-heading Discover, Analyze,
+        p.tertiary-heading Act with PIB's Media Analyzer.
+      .hero-img 
+        img(src="/images/hero-img.png" class='img-hero')
   .dashboard-container
-    h1 Dashboard
+    p.primary-heading Live-News:Dashboard
+    p.tertiary-heading Real-Time Media Monitoring: Stay Informed, Stay Ahead
     ul.news-list
       each article in articles
         li.news-item
