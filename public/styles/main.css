@@ -51,6 +51,7 @@ body {
 }
 .nav__el--logout {
     color: white;
+    cursor: pointer;
 }
 .nav-ele a {
     display: flex;
