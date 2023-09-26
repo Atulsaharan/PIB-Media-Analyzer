@@ -437,7 +437,7 @@ body {
     justify-content: space-between;
     padding-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(44rem, 1fr));
     gap: 20px;
 }
 
@@ -454,16 +454,16 @@ body {
 /* /////////////////////////////////// */
 /* about- main functions */
 /* /////////////////////////////////// */
-.text-lg{
+.text-lg {
     margin: auto;
     padding: 20px;
-    margin-left:  30px;
+    margin-left: 30px;
 }
-.container-about{
+.container-about {
     margin: auto;
     padding: 30px;
 }
-.text-md{
+.text-md {
     margin: auto;
     padding: 20px;
     margin-left: 30px;
