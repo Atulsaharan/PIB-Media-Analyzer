@@ -13,7 +13,7 @@ block content
             li.news-item.positive-news
               h2.news-title= article.title
               p.news-content= article.content
-              a.news-link(href=`/news/${article._id}`) Read More
+              a.news-link(href=article.website_link target="blank") Read More
       .neutral-news-column
         h3 Neutral News:
         ul.news-list
@@ -21,7 +21,7 @@ block content
             li.news-item.neutral-news
               h2.news-title= article.title
               p.news-content= article.content
-              a.news-link(href=`/news/${article._id}`) Read More
+              a.news-link(href=article.website_link target="blank") Read More
 
       .negative-news-column
         h3 Non Favorable News:
@@ -30,4 +30,4 @@ block content
             li.news-item.negative-news
               h2.news-title= article.title
               p.news-content= article.content
-              a.news-link(href=`/news/${article._id}`) Read More
+              a.news-link(href=article.website_link target="blank") Read More

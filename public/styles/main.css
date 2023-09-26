@@ -440,12 +440,6 @@ body {
     gap: 20px;
 }
 
-/* .positive-news-column,
-.negative-news-column,
-.neutral-news-column {
-    flex: 1;
-} */
-
 .positive-news-column {
     font-weight: 400;
 }
