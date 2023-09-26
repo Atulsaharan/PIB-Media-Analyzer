@@ -9,7 +9,7 @@ router.get("/", authController.isLoggedIn, viewController.getOverview);
 router.get("/login", authController.isLoggedIn, viewController.getLoginForm);
 
 router.get("/profile", authController.protect, viewController.showProfile);
-
+router.get("/about-pib-media-analyzer", viewController.getAboutPibMediaAnal);
 router.get("/pib-main-functions", viewController.getPibMainFunctions);
 router.get(
     "/pib-organizational-setup",

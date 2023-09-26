@@ -86,3 +86,11 @@ exports.getPibOrganizationalSetup = async (req, res) => {
         res.status(500).send("something went very wrong!!");
     }
 };
+
+exports.getAboutPibMediaAnal = async (req, res) => {
+    try {
+        await res.status(200).render("about-pib-media-analyzer");
+    } catch (err) {
+        res.status(404).send("404:Page not found");
+    }
+};
