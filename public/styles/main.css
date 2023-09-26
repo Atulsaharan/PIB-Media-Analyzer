@@ -38,7 +38,7 @@ body {
     gap: 3.6rem;
     justify-content: center;
     background-color: #ff922b;
-    padding: 1rem;
+    padding: 0.8rem;
 }
 
 .nav__el {
@@ -56,6 +56,7 @@ body {
 .nav-ele a {
     display: flex;
     text-decoration: none;
+    font-size: 3rem;
     color: white;
     /* align-items: center; */
 }
@@ -69,9 +70,9 @@ body {
     gap: 4rem;
 }
 .social-handles a svg {
-    height: 40px;
-    width: 40px;
-    transform: translateY(4px);
+    height: 30px;
+    width: 30px;
+    transform: translateY(2px);
 }
 
 .login-button {
@@ -79,7 +80,9 @@ body {
     border-radius: 15px;
     padding: 3px 6px;
 }
-
+.login-button a {
+    font-size: 2.8rem;
+}
 /* copied  */
 /* Navbar container */
 .navbar {
@@ -105,7 +108,7 @@ body {
 
 /* Dropdown button */
 .dropdown .dropbtn {
-    font-size: 3.2rem;
+    font-size: 3rem;
     border: none;
     outline: none;
     color: white;
@@ -117,7 +120,7 @@ body {
 /* Add a red background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: #fd7e14;
 }
 
 /* Dropdown content (hidden by default) */
