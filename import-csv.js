@@ -33,15 +33,26 @@ async function importCSV() {
                 content: row.content,
                 sentiment: row.sentiment,
                 department: row.department,
+                website_link: row.website_link,
                 // Add more fields and mappings as needed
             });
             console.log(`Inserted: ${row.title}`);
             if (row.sentiment == -1) {
                 //sendinng email
+                const userCollection = db.collection("users");
+                const officer = await userCollection.findOne({
+                    department: row.department,
+                });
+
                 sendEmail({
-                    email: "idanurag567@gmail.com",
+                    email: officer.email,
                     subject: `Negative-News:${row.title}`,
-                    message: row.content,
+                    message: `Hello ${officer.name}{PIB officer} 
+                    Here you have a mail redgarding a neagtive news of your departmnet ${officer.department}:
+
+                    ${row.content}
+                    
+                    This is a system genrated mail hence no need to reply ... unless you want to talk to robot`,
                 }).then(console.log("Email sent succesfully"));
             }
         });
